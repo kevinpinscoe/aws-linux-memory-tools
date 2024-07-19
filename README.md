@@ -2,7 +2,7 @@
 
 Run on AWS Linux and reports if free memory is near zero.
 
-An example is if PDF generation is going on free meory is nearly or is exhausted.
+An example might be when free memory is nearly exhausted during PDF generation.
 
 This would log to CoudWatch which could then make a decison to scale up by a single instance.
 
