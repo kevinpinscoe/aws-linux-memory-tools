@@ -56,4 +56,3 @@ release:
     name: aws-linux-memory-tools
   name_template: "v{{ .Version }}"
   make_latest: true
-  generate_release_notes: true
