@@ -21,6 +21,19 @@ archives:
     name_template: "aws-linux-memory-tools-{{ .Os }}-{{ .Arch }}"
     format: binary
 
+
+nfpms:
+  - id: aws-linux-memory-tools-packages
+    package_name: aws-linux-memory-tools
+    vendor: Kevin P. Inscoe
+    homepage: https://github.com/kevinpinscoe/aws-linux-memory-tools
+    maintainer: Kevin P. Inscoe <kevin.inscoe@gmail.com>
+    description: AWS Linux memory diagnostics
+    license: MIT
+    formats: [deb, rpm]
+    bindir: /usr/bin
+    builds: [aws-linux-memory-tools]
+
 checksum:
   name_template: "checksums.txt"
 
