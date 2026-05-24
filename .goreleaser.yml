@@ -34,6 +34,19 @@ nfpms:
     bindir: /usr/bin
     builds: [aws-linux-memory-tools]
 
+brews:
+  - name: aws-linux-memory-tools
+    repository:
+      owner: kevinpinscoe
+      name: homebrew-tap
+      token: "{{ .Env.HOMEBREW_TAP_TOKEN }}"
+    directory: Formula
+    homepage: https://github.com/kevinpinscoe/aws-linux-memory-tools
+    description: AWS Linux memory diagnostics
+    license: MIT
+    test: |
+      system "#{bin}/aws-linux-memory-tools", "--help"
+
 checksum:
   name_template: "checksums.txt"
 
