@@ -8,6 +8,32 @@ This would log to CoudWatch which could then make a decison to scale up by a sin
 
 # Install
 
+## Package managers
+
+### APT (Debian/Ubuntu)
+
+```bash
+curl -sL https://kevinpinscoe.github.io/apt/gpg.key \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/kevinpinscoe.gpg
+
+echo "deb [signed-by=/etc/apt/keyrings/kevinpinscoe.gpg] \
+  https://kevinpinscoe.github.io/apt stable main" \
+  | sudo tee /etc/apt/sources.list.d/kevinpinscoe.list
+
+sudo apt update
+sudo apt install aws-linux-memory-tools
+```
+
+### DNF (Fedora/RHEL)
+
+```bash
+sudo curl -fsSL https://kevinpinscoe.github.io/rpm/kevinpinscoe.repo \
+  -o /etc/yum.repos.d/kevinpinscoe.repo
+sudo dnf install aws-linux-memory-tools
+```
+
+## Compile from source
+
 * ```go mod init linux-memory-tool```
 * ```go mod tidy```
 
