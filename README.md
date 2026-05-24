@@ -4,11 +4,21 @@ Run on AWS Linux and reports if free memory is near zero.
 
 An example might be when free memory is nearly exhausted during PDF generation.
 
-This would log to CoudWatch which could then make a decison to scale up by a single instance.
+This would log to CloudWatch which could then make a decision to scale up by a single instance.
 
 # Install
 
 ## Package managers
+
+### Amazon Linux 2023
+
+Amazon Linux 2023 is RPM-based and uses DNF. Add the RPM repo and install:
+
+```bash
+sudo curl -fsSL https://kevinpinscoe.github.io/rpm/kevinpinscoe.repo \
+  -o /etc/yum.repos.d/kevinpinscoe.repo
+sudo dnf install aws-linux-memory-tools
+```
 
 ### Homebrew (macOS/Linux)
 
@@ -46,4 +56,4 @@ sudo dnf install aws-linux-memory-tools
 
 # Deployment
 
-Deployed as a part of ec2 User Agent?
+Deployed as part of EC2 User Data?
