@@ -10,6 +10,13 @@ This would log to CoudWatch which could then make a decison to scale up by a sin
 
 ## Package managers
 
+### Homebrew (macOS/Linux)
+
+```bash
+brew tap kevinpinscoe/homebrew-tap
+brew install aws-linux-memory-tools
+```
+
 ### APT (Debian/Ubuntu)
 
 ```bash
