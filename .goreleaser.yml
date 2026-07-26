@@ -17,9 +17,9 @@ builds:
 
 archives:
   - id: aws-linux-memory-tools-archive
-    builds: [aws-linux-memory-tools]
+    ids: [aws-linux-memory-tools]
     name_template: "aws-linux-memory-tools-{{ .Os }}-{{ .Arch }}"
-    format: binary
+    formats: [binary]
 
 
 nfpms:
@@ -32,7 +32,7 @@ nfpms:
     license: MIT
     formats: [deb, rpm]
     bindir: /usr/bin
-    builds: [aws-linux-memory-tools]
+    ids: [aws-linux-memory-tools]
 
 brews:
   - name: aws-linux-memory-tools
