@@ -24,7 +24,15 @@ sudo dnf install aws-linux-memory-tools
 
 ```bash
 brew tap kevinpinscoe/homebrew-tap
-brew install aws-linux-memory-tools
+brew install --cask aws-linux-memory-tools
+```
+
+Upgrading from a release before v1.0.2? This tool shipped as a formula until
+then. Remove the old one first — a formula and a cask of the same name cannot
+coexist:
+
+```bash
+brew uninstall aws-linux-memory-tools
 ```
 
 ### APT (Debian/Ubuntu)
