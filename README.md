@@ -65,3 +65,13 @@ sudo dnf install aws-linux-memory-tools
 # Deployment
 
 Deployed as part of EC2 User Data?
+
+## Security
+
+Release artifacts are cosign-signed and each release publishes an SPDX SBOM.
+See [SECURITY.md](SECURITY.md) for verification steps and how to report a
+vulnerability.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
